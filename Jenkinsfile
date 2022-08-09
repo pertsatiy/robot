@@ -28,7 +28,8 @@ pipeline{//робочий код
             echo "Deploy the application"  
            }  
 
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        stge('publishHTML')
+        ([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
     }
 
 }
