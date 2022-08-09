@@ -7,8 +7,9 @@ pipeline{
         choice(name:'BROWSER', choices: ['chrome', 'edge'], description: "Choice the browser where you want to execute your scripts")
     }
 
-    }
-
+    
+    
+    
     stages{
         stage('Bulding'){
             steps{
@@ -28,5 +29,8 @@ pipeline{
            }  
     }
 
-    }
+}
 
+
+
+}
