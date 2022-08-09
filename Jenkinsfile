@@ -28,7 +28,7 @@ pipeline{//робочий код
             echo "Deploy the application"  
            }  
 
-        stge('publishHTML')
+        stage('publishHTML')
         ([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
     }
 
