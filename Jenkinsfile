@@ -1,4 +1,5 @@
-pipeline{//робочий код
+pipeline{
+    //робочий код
 
     agent any
 
@@ -7,7 +8,11 @@ pipeline{//робочий код
         choice(name:'BROWSER', choices: ['chrome', 'edge'], description: "Choice the browser where you want to execute your scripts")
     }
 
-    
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
+    }
     
     
     stages{
@@ -28,12 +33,6 @@ pipeline{//робочий код
             echo "Deploy the application"  
            }  
 
-        stage('publishHTML')
-        ([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
     }
-
-}
-
-
-
 }
