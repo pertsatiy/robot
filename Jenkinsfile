@@ -7,6 +7,10 @@ pipeline{
         choice(name:'BROWSER', choices: ['chrome', 'edge'], description: "Choice the browser where you want to execute your scripts")
     }
 
+    options{
+        ansiColor('xterm')
+    }
+
     stages{
         stage('Bulding'){
             steps{
@@ -26,8 +30,13 @@ pipeline{
            }  
     }
 
-
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
     }
+
+}
 
 
 
