@@ -13,7 +13,9 @@ pipeline{
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])        }
     }
     
-    ansiColor('xterm')
+    options{
+            ansiColor('xterm')
+    }
     
     stages{
         stage('Bulding'){
