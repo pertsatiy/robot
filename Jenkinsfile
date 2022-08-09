@@ -27,6 +27,8 @@ pipeline{//робочий код
            steps{
             echo "Deploy the application"  
            }  
+
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
     }
 
 }
