@@ -1,4 +1,4 @@
-pipeline{
+pipeline{//робочий код
 
     agent any
 
