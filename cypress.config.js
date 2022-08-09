@@ -8,6 +8,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
+    embeddedScreenshots: true
     //     embeddedScreenshots: true
   },
   e2e: {
