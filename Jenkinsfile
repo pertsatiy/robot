@@ -16,7 +16,7 @@ pipeline{
         stage('Testing'){
             steps{
                 sh "npm i"
-                sh "npx cypress run --browser ${BROWSER} --disable-gpu --spec ${MOINCOINS}"
+                sh "npx cypress run"
                 // sh "npx cypress run --browser ${BROWSER} --spec ${MOINCOINS}"
             }
         }
