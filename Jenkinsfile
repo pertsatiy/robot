@@ -16,7 +16,7 @@ pipeline{
         stage('Testing'){
             steps{
                 sh "npm i"
-                sh "npm cypress open  --browser ${BROWSER} --spec ${MOINCOINS}"
+                sh "npm open cypress   --browser ${BROWSER} --spec ${MOINCOINS}"
             }
         }
         stage('Deploying'){
