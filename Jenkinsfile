@@ -31,7 +31,7 @@ pipeline{
 
             slackSend channel: '#jenkins-robot',
                       color: COLOR_MAP[currentBuild.currentResult],
-                      message: "*${currentBuild.currentResult}:* ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n Tests: ${MOINCOINS} executed at ${BROWSER} \n More information at: ${env.BUILD_URL}HTML_20Report/"
+                      message: "*${currentBuild.currentResult}:* ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n Tests: ${MOINCOINS} executed at ${BROWSER} \n This is a test for robot.txt. More information at: ${env.BUILD_URL}HTML_20Report/"
 
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])    
         }
