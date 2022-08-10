@@ -4,12 +4,10 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
-    reportPageTitle: 'Robot Report',
+    reportPageTitle: 'Robot',
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    embeddedScreenshots: true
-    //     embeddedScreenshots: true
   },
   e2e: {
     setupNodeEvents(on, config) {
