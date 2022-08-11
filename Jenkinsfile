@@ -5,9 +5,6 @@ def COLOR_MAP=[
     'FAILURE': 'danger',
 ]
 
-def getBuildUser(){
-    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
-}
 
 pipeline{
 
@@ -25,9 +22,6 @@ pipeline{
     post{
         always{
 
-            script{
-                BUILD_USER = getBuildUser()
-            }
 
             slackSend channel: '#jenkins-robot',
                       color: COLOR_MAP[currentBuild.currentResult],
