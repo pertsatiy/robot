@@ -6,7 +6,7 @@ def COLOR_MAP=[
 ]
 
 def getBuildUser(){
-    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId("Denis")
+    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId()
 }
 
 pipeline{
@@ -26,7 +26,7 @@ pipeline{
         always{
 
             script{
-                BUILD_USER = getBuildUser()
+                BUILD_USER = getBuildUser("Denis")
             }
 
             slackSend channel: '#jenkins-robot',
