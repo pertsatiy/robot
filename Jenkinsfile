@@ -6,7 +6,7 @@ def COLOR_MAP=[
 ]
 
 def getBuildUser(){
-    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId(Denis)
+    return currentBuild.rawBuild.getCause(Cause.UserIdCause).getUserId("Denis")
 }
 
 pipeline{
