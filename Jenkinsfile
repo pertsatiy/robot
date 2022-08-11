@@ -26,7 +26,7 @@ pipeline{
         always{
 
             script{
-                BUILD_USER = getBuildUser()
+                BUILD_USER = getBuildUsers()
             }
 
             slackSend channel: '#jenkins-robot',
