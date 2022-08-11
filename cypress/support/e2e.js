@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import '/home/pertsatiy/.npmrc' //./comands
+import './comands' //./comands
 import 'cypress-mochawesome-reporter/register';
 
 // Alternatively you can use CommonJS syntax:
