@@ -43,16 +43,14 @@ pipeline{
         }
         stage('Testing'){
             steps{
-                sh "npm i"
                 sh "npx cypress run"
-                // sh "npx cypress run --browser ${BROWSER} --spec ${MOINCOINS}"
+                // sh "npx cypress run --browser ${BROWSER} --spec ${MOINCOINS}" sh "npm i"
             }
         }
         stage('Deploying'){
            steps{
             echo "Deploy the application"  
            }  
-
         }
     }
 }
